@@ -2,6 +2,7 @@
 
 ## Overview
 The **Iris Flower Classification** project is a machine learning task that involves predicting the species of an iris flower based on its physical attributes. The dataset used is the **Iris Dataset**, a widely recognized dataset in the machine learning community.
+![image](https://github.com/user-attachments/assets/aad10673-623e-40a9-9d20-ead5a4921ea2)
 
 ## Dataset Information
 The dataset consists of **150 samples**, each belonging to one of three iris species:
