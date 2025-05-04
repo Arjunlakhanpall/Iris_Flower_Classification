@@ -18,12 +18,15 @@ Includes:
 import subprocess
 import sys
 
-required_libs = ['pandas', 'seaborn', 'matplotlib', 'scikit-learn']
-for lib in required_libs:
-    try:
-        __import__(lib)
-    except ImportError:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", lib])
+def install_libraries():
+    required_libs = ['pandas', 'seaborn', 'matplotlib', 'scikit-learn']
+    for lib in required_libs:
+        try:
+            __import__(lib)
+        except ImportError:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", lib])
+
+install_libraries()
 
 # 🧠 Import libraries
 import pandas as pd
@@ -64,7 +67,7 @@ y_pred = clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print("\n✅ Model Accuracy:", round(accuracy * 100, 2), "%\n")
 print("📊 Classification Report:\n", classification_report(y_test, y_pred, target_names=iris.target_names))
-print("🧾 Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
+print("🧮 Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
 # 📈 Feature Importance
 feat_importance = pd.Series(clf.feature_importances_, index=X.columns)
